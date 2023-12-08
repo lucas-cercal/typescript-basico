@@ -48,3 +48,12 @@ function advancedGreeting(firstName: string, lastName?: string) {
 
 console.log(advancedGreeting("Lucas", "Cercal"))
 console.log(advancedGreeting("Lucas"))
+
+
+function showBalance(balance: string | number){
+  console.log(`O saldo da conta é R$${balance}`)
+}
+
+showBalance(100)
+showBalance("500")
+// showBalance(true)
