@@ -6,3 +6,5 @@ names.push("Fernanda");
 var nums = [100, 2];
 nums.push(3);
 console.log(nums);
+var arr1 = [1, "Teste", true, [], { nome: "Lucas" }];
+console.log(arr1);
