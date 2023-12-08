@@ -114,7 +114,9 @@ type personType = {
 //   age: number
 // }
 
-function showDirection(direction: 'center' | 'left' | 'right') {
+type direction = 'center' | 'left' | 'right'
+
+function showDirection(direction: direction): void {
   console.log(`A direção é: ${direction}`)
 }
 
@@ -122,3 +124,7 @@ showDirection('center')
 showDirection('left')
 showDirection('right')
 // showDirection('error')
+
+const p = document.getElementById('some-p')
+
+console.log(p!.innerText)

@@ -63,9 +63,6 @@ var coordObj = {
 showCoords(coordObj);
 var somePerson = { name: 'Lucas', age: 23 };
 console.log(somePerson);
-// type personType = {
-//   age: number
-// }
 function showDirection(direction) {
     console.log("A dire\u00E7\u00E3o \u00E9: ".concat(direction));
 }
@@ -73,3 +70,5 @@ showDirection('center');
 showDirection('left');
 showDirection('right');
 // showDirection('error')
+var p = document.getElementById('some-p');
+console.log(p.innerText);
