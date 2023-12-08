@@ -47,3 +47,8 @@ function showUserRole(role) {
 }
 console.log(showUserRole("Admin"));
 console.log(showUserRole(false));
+function showId(id) {
+    console.log("O ID \u00E9: ".concat(id));
+}
+showId(1);
+showId('1');

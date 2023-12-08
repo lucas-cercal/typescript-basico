@@ -50,7 +50,7 @@ console.log(advancedGreeting("Lucas", "Cercal"))
 console.log(advancedGreeting("Lucas"))
 
 
-function showBalance(balance: string | number){
+function showBalance(balance: string | number) {
   console.log(`O saldo da conta é R$${balance}`)
 }
 
@@ -65,3 +65,13 @@ function showUserRole(role: boolean | string) {
 
 console.log(showUserRole("Admin"))
 console.log(showUserRole(false))
+
+
+type ID = string | number
+
+function showId(id: ID) {
+  console.log(`O ID é: ${id}`)
+}
+
+showId(1)
+showId('1')
