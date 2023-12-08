@@ -5,7 +5,7 @@ function soma(a: number, b: number) {
 
 soma(4, 2)
 
-//soma("a", "b")
+//soma('a', 'b')
 
 
 function greeting(name: string): string {
@@ -28,14 +28,14 @@ const objCoord = { x: 329, y: 84.2 }
 
 passCoordinates(objCoord)
 
-const pessoaObj: { name: string, surname: string } = { name: "Lucas", surname: "Cercal Fontes" }
+const pessoaObj: { name: string, surname: string } = { name: 'Lucas', surname: 'Cercal Fontes' }
 
 console.log(pessoaObj)
 
 function showNumber(a: number, b: number, c?: number) {
-  console.log("A " + a)
-  console.log("B " + b)
-  if (c) console.log("C " + c)
+  console.log('A ' + a)
+  console.log('B ' + b)
+  if (c) console.log('C ' + c)
 }
 
 showNumber(1, 2, 3)
@@ -46,8 +46,8 @@ function advancedGreeting(firstName: string, lastName?: string) {
   return `Olá, ${firstName}, tudo bem?`
 }
 
-console.log(advancedGreeting("Lucas", "Cercal"))
-console.log(advancedGreeting("Lucas"))
+console.log(advancedGreeting('Lucas', 'Cercal'))
+console.log(advancedGreeting('Lucas'))
 
 
 function showBalance(balance: string | number) {
@@ -55,15 +55,15 @@ function showBalance(balance: string | number) {
 }
 
 showBalance(100)
-showBalance("500")
+showBalance('500')
 // showBalance(true)
 
 function showUserRole(role: boolean | string) {
-  if (typeof role === "boolean") return "Usuário não aprovado!"
+  if (typeof role === 'boolean') return 'Usuário não aprovado!'
   return `A função do usuário é: ${role}`
 }
 
-console.log(showUserRole("Admin"))
+console.log(showUserRole('Admin'))
 console.log(showUserRole(false))
 
 
@@ -102,7 +102,7 @@ interface Person {
   age: number
 }
 
-const somePerson: Person = { name: "Lucas", age: 23 }
+const somePerson: Person = { name: 'Lucas', age: 23 }
 
 console.log(somePerson)
 
@@ -113,3 +113,12 @@ type personType = {
 // type personType = {
 //   age: number
 // }
+
+function showDirection(direction: 'center' | 'left' | 'right') {
+  console.log(`A direção é: ${direction}`)
+}
+
+showDirection('center')
+showDirection('left')
+showDirection('right')
+// showDirection('error')

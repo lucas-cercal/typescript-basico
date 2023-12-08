@@ -2,7 +2,7 @@ function soma(a, b) {
     console.log(a + b);
 }
 soma(4, 2);
-//soma("a", "b")
+//soma('a', 'b')
 function greeting(name) {
     return "Ol\u00E1 ".concat(name);
 }
@@ -17,13 +17,13 @@ function passCoordinates(coord) {
 }
 var objCoord = { x: 329, y: 84.2 };
 passCoordinates(objCoord);
-var pessoaObj = { name: "Lucas", surname: "Cercal Fontes" };
+var pessoaObj = { name: 'Lucas', surname: 'Cercal Fontes' };
 console.log(pessoaObj);
 function showNumber(a, b, c) {
-    console.log("A " + a);
-    console.log("B " + b);
+    console.log('A ' + a);
+    console.log('B ' + b);
     if (c)
-        console.log("C " + c);
+        console.log('C ' + c);
 }
 showNumber(1, 2, 3);
 showNumber(1, 2);
@@ -32,20 +32,20 @@ function advancedGreeting(firstName, lastName) {
         return "Ol\u00E1, ".concat(firstName, " ").concat(lastName, ", tudo bem?");
     return "Ol\u00E1, ".concat(firstName, ", tudo bem?");
 }
-console.log(advancedGreeting("Lucas", "Cercal"));
-console.log(advancedGreeting("Lucas"));
+console.log(advancedGreeting('Lucas', 'Cercal'));
+console.log(advancedGreeting('Lucas'));
 function showBalance(balance) {
     console.log("O saldo da conta \u00E9 R$".concat(balance));
 }
 showBalance(100);
-showBalance("500");
+showBalance('500');
 // showBalance(true)
 function showUserRole(role) {
-    if (typeof role === "boolean")
-        return "Usuário não aprovado!";
+    if (typeof role === 'boolean')
+        return 'Usuário não aprovado!';
     return "A fun\u00E7\u00E3o do usu\u00E1rio \u00E9: ".concat(role);
 }
-console.log(showUserRole("Admin"));
+console.log(showUserRole('Admin'));
 console.log(showUserRole(false));
 function showId(id) {
     console.log("O ID \u00E9: ".concat(id));
@@ -61,8 +61,15 @@ var coordObj = {
     z: 20
 };
 showCoords(coordObj);
-var somePerson = { name: "Lucas", age: 23 };
+var somePerson = { name: 'Lucas', age: 23 };
 console.log(somePerson);
 // type personType = {
 //   age: number
 // }
+function showDirection(direction) {
+    console.log("A dire\u00E7\u00E3o \u00E9: ".concat(direction));
+}
+showDirection('center');
+showDirection('left');
+showDirection('right');
+// showDirection('error')
