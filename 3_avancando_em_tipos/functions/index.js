@@ -61,3 +61,8 @@ var coordObj = {
     z: 20
 };
 showCoords(coordObj);
+var somePerson = { name: "Lucas", age: 23 };
+console.log(somePerson);
+// type personType = {
+//   age: number
+// }

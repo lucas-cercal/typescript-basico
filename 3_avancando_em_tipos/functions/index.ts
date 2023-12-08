@@ -86,10 +86,30 @@ function showCoords(obj: Point) {
   console.log(`X: ${obj.x} Y: ${obj.y} Z: ${obj.z}`)
 }
 
-const coordObj:Point = {
+const coordObj: Point = {
   x: 10,
   y: 15,
   z: 20
 }
 
 showCoords(coordObj)
+
+interface Person {
+  name: string
+}
+
+interface Person {
+  age: number
+}
+
+const somePerson: Person = { name: "Lucas", age: 23 }
+
+console.log(somePerson)
+
+type personType = {
+  name: string
+}
+
+// type personType = {
+//   age: number
+// }
