@@ -27,3 +27,10 @@ function showNumber(a, b, c) {
 }
 showNumber(1, 2, 3);
 showNumber(1, 2);
+function advancedGreeting(firstName, lastName) {
+    if (lastName !== undefined)
+        return "Ol\u00E1, ".concat(firstName, " ").concat(lastName, ", tudo bem?");
+    return "Ol\u00E1, ".concat(firstName, ", tudo bem?");
+}
+console.log(advancedGreeting("Lucas", "Cercal"));
+console.log(advancedGreeting("Lucas"));

@@ -40,3 +40,11 @@ function showNumber(a: number, b: number, c?: number) {
 
 showNumber(1, 2, 3)
 showNumber(1, 2)
+
+function advancedGreeting(firstName: string, lastName?: string) {
+  if (lastName !== undefined) return `Olá, ${firstName} ${lastName}, tudo bem?`
+  return `Olá, ${firstName}, tudo bem?`
+}
+
+console.log(advancedGreeting("Lucas", "Cercal"))
+console.log(advancedGreeting("Lucas"))
