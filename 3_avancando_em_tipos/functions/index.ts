@@ -31,3 +31,12 @@ passCoordinates(objCoord)
 const pessoaObj: { name: string, surname: string } = { name: "Lucas", surname: "Cercal Fontes" }
 
 console.log(pessoaObj)
+
+function showNumber(a: number, b: number, c?: number) {
+  console.log("A " + a)
+  console.log("B " + b)
+  if (c) console.log("C " + c)
+}
+
+showNumber(1, 2, 3)
+showNumber(1, 2)

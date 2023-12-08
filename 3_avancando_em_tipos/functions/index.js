@@ -19,3 +19,11 @@ var objCoord = { x: 329, y: 84.2 };
 passCoordinates(objCoord);
 var pessoaObj = { name: "Lucas", surname: "Cercal Fontes" };
 console.log(pessoaObj);
+function showNumber(a, b, c) {
+    console.log("A " + a);
+    console.log("B " + b);
+    if (c)
+        console.log("C " + c);
+}
+showNumber(1, 2, 3);
+showNumber(1, 2);
