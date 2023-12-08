@@ -72,3 +72,8 @@ showDirection('right');
 // showDirection('error')
 var p = document.getElementById('some-p');
 console.log(p.innerText);
+var n;
+n = 1000n;
+console.log(n);
+console.log(typeof n);
+console.log(n + 100n);
