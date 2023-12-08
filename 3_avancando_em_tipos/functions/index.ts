@@ -29,4 +29,5 @@ const objCoord = { x: 329, y: 84.2 }
 passCoordinates(objCoord)
 
 const pessoaObj: { name: string, surname: string } = { name: "Lucas", surname: "Cercal Fontes" }
+
 console.log(pessoaObj)
