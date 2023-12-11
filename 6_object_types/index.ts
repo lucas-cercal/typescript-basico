@@ -152,3 +152,12 @@ anotherUser[0] = 'João'
 console.log(anotherUser[0])
 
 // anotherUser[1] = 'teste'
+
+// 9 - tuplas com readonly
+function showNumbers(numbers: readonly [number, number]) {
+  // numbers[0] = 10
+  console.log(numbers[0])
+  console.log(numbers[1])
+}
+
+showNumbers([1, 2])
