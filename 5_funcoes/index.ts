@@ -101,3 +101,19 @@ function doSomething(x: unknown) {
 
 doSomething([1, 2, 3])
 doSomething(5)
+
+// 9 - never
+function showErrorMessage(msg: string): never {
+  throw new Error(msg)
+}
+
+// showErrorMessage('Algum erro.')
+
+// 10 - rest operator
+function sumAll(...n: number[]) {
+  return n.reduce((number, sum) => sum + number)
+}
+
+console.log(sumAll(1, 2, 3, 4, 5))
+console.log(sumAll(5, 348, 2348))
+// console.log(sumAll('teste'))
