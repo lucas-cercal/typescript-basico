@@ -89,3 +89,15 @@ function somaDefault(n: number, m = 10): number {
 
 console.log(somaDefault(10))
 console.log(somaDefault(15, 15))
+
+// 8 - unknown
+function doSomething(x: unknown) {
+  if (Array.isArray(x)) {
+    console.log(x[0])
+  } else if (typeof x === 'number') {
+    console.log('X é um número')
+  }
+}
+
+doSomething([1, 2, 3])
+doSomething(5)
