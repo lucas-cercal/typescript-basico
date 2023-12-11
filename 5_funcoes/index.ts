@@ -29,3 +29,23 @@ function preGreeting(f: (name: string) => string, userName: string) {
 
 preGreeting(greeting, 'Lucas')
 preGreeting(greeting, 'Oi')
+
+// 3 - generic function
+function firstElement<T>(arr: T[]): T {
+  return arr[0]
+}
+
+console.log(firstElement([1, 2, 3]))
+console.log(firstElement(['a', 'b', 'c']))
+// console.log(firstElement('Teste'))
+
+function mergeObjects<U, T>(obj1: U, obj2: T) {
+  return {
+    ...obj1,
+    ...obj2
+  }
+}
+
+const newObject = mergeObjects({ name: 'Lucas' }, { age: 24, job: 'Programmer' })
+
+console.log(newObject)
