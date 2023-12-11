@@ -72,3 +72,12 @@ function mergeArrays<T>(arr1: T[], arr2: T[]) {
 }
 
 console.log(mergeArrays<number | string>([1, 2, 3], ['Teste', 'Testando']))
+
+// 6 - parâmetros opcionais
+function modernGreeting(name: string, greet?: string) {
+  if (greet) return `Olá ${greet} ${name}, tudo bem?`
+  return `Olá ${name}, tudo bem?`
+}
+
+console.log(modernGreeting('Lucas'))
+console.log(modernGreeting('Lucas', 'Sr'))
