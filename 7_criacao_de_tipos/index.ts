@@ -51,3 +51,6 @@ const server = {
 console.log(getSomeKey(server, 'ram'))
 console.log(getSomeKey(server, 'hd'))
 // console.log(getSomeKey(server, 'teste'))
+
+// 5 - keyof type operator
+type Character = { name: string, age: number, hasDriveLicense: boolean }
