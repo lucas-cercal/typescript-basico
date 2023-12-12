@@ -76,12 +76,12 @@ console.log(destroyer)
 
 console.log(trator)
 
-class CyborgMan extends KillerMachine{
+class CyborgMan extends KillerMachine {
   name: string
   guns: number
   powers: string[]
 
-  constructor(name: string, guns: number, powers: string[]){
+  constructor(name: string, guns: number, powers: string[]) {
     super(name, guns)
     this.powers = powers
   }
@@ -90,3 +90,22 @@ class CyborgMan extends KillerMachine{
 const roboticMan = new CyborgMan('X-Human', 2, ['Force', 'Fire'])
 
 console.log(roboticMan)
+
+// 5 - métodos
+class Dwarf {
+  name: string
+
+  constructor(name: string) {
+    this.name = name
+  }
+
+  greeting() {
+    console.log('Hey Stranger!')
+  }
+}
+
+const jimmy = new Dwarf('Jimmy')
+
+console.log(jimmy)
+
+jimmy.greeting()
