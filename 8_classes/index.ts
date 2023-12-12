@@ -9,5 +9,6 @@ const lucas = new User()
 console.log(lucas)
 
 lucas.name = 'Lucas'
+// lucas.job = 'Programmer'
 
 console.log(lucas)
