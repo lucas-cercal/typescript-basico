@@ -49,3 +49,44 @@ console.log(fusca.wheels)
 fusca.name = 'Fusca Turbo'
 
 // fusca.wheels = 5
+
+// 4 - herança e super
+class Machine {
+  name: string
+
+  constructor(name: string) {
+    this.name = name
+  }
+}
+
+const trator = new Machine('Trator')
+
+class KillerMachine extends Machine {
+  guns: number
+
+  constructor(name: string, guns: number) {
+    super(name)
+    this.guns = guns
+  }
+}
+
+const destroyer = new KillerMachine('Destroyer', 4)
+
+console.log(destroyer)
+
+console.log(trator)
+
+class CyborgMan extends KillerMachine{
+  name: string
+  guns: number
+  powers: string[]
+
+  constructor(name: string, guns: number, powers: string[]){
+    super(name, guns)
+    this.powers = powers
+  }
+}
+
+const roboticMan = new CyborgMan('X-Human', 2, ['Force', 'Fire'])
+
+console.log(roboticMan)
