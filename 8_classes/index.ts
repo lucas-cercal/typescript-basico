@@ -173,7 +173,7 @@ class Coords {
     console.log('Y inserido com sucesso')
   }
 
-  get getCoords(){
+  get getCoords() {
     return `X: ${this.x} e Y: ${this.y}`
   }
 }
@@ -188,3 +188,40 @@ console.log(myCoords)
 myCoords.fillY = 10
 
 console.log(myCoords.getCoords)
+
+// 9 - implements
+interface showTitle {
+  itemTitle(): string
+}
+
+class blogPost implements showTitle {
+  title: string
+
+  constructor(title: string) {
+    this.title = title
+  }
+
+  itemTitle(): string {
+    return `O título do post é: ${this.title}`
+  }
+}
+
+const myPost = new blogPost('Hello World')
+
+console.log(myPost.itemTitle())
+
+class TestingInterface implements showTitle {
+  title: string
+  
+  constructor(title: string) {
+    this.title = title
+  }
+
+  itemTitle(): string {
+    return `O título é: ${this.title}`
+  }
+}
+
+const testInterface = new TestingInterface('Hello')
+
+console.log(testInterface.itemTitle())
