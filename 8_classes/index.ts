@@ -382,3 +382,18 @@ console.log(newShirt.name)
 console.log(newShirt.showPrice)
 
 console.log(newShirt.showQty)
+
+// 17 - class expressions
+const myClass = class<T> {
+  name: T
+
+  constructor(name: T) {
+    this.name = name
+  }
+}
+
+const pessoa = new myClass('Jones')
+
+console.log(pessoa)
+
+console.log(pessoa.name)
