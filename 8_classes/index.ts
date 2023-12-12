@@ -212,7 +212,7 @@ console.log(myPost.itemTitle())
 
 class TestingInterface implements showTitle {
   title: string
-  
+
   constructor(title: string) {
     this.title = title
   }
@@ -248,7 +248,7 @@ class C {
   public x = 10
 }
 
-class D extends C{
+class D extends C {
 
 }
 
@@ -259,3 +259,28 @@ console.log(cInstance.x)
 const dInstance = new D()
 
 console.log(dInstance.x)
+
+// 12 - protected
+class E {
+  protected x = 10
+
+  protected protectedMethod() {
+    console.log('Este método é protegido')
+  }
+}
+
+class F extends E {
+  show() {
+    console.log('X: ' + this.x)
+  }
+
+  showProtectedMethod() {
+    this.protectedMethod()
+  }
+}
+
+const fInstance = new F()
+
+fInstance.show()
+
+fInstance.showProtectedMethod()
