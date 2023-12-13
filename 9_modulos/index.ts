@@ -7,3 +7,12 @@ importGreet()
 import { x } from "./variable"
 
 console.log(x)
+
+// 3 - multiplas importacoes
+import { a, b, myFunction } from "./multiple"
+
+console.log(a)
+
+console.log(b)
+
+myFunction()
