@@ -1,7 +1,7 @@
 // 3 - componentes
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 
-function FirstComponent({}: ReactElement) {
+function FirstComponent(): ReactElement {
   return (
     <div>
       <h1>Meu primeiro componente</h1>

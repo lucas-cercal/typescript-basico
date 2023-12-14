@@ -1,3 +1,6 @@
+// 4 - importacao de componentes
+import FirstComponent from "./components/FirstComponent"
+
 function App() {
 
   // 1 - variaveis
@@ -17,6 +20,7 @@ function App() {
       <p>Idade: {age}</p>
       {isWorking && <p>Está trabalhando!</p>}
       <h3>{userGreeting(name)}</h3>
+      <FirstComponent />
     </div>
   );
 }
