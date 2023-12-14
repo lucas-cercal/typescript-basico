@@ -1,4 +1,6 @@
 // 4 - importacao de componentes
+import { createContext } from "react"
+
 import FirstComponent from "./components/FirstComponent"
 
 // 5 - desestruturando props
@@ -10,6 +12,15 @@ import State from "./components/State"
 
 // 8 - types
 type textOrNull = string | null
+
+// 9 - context
+interface IAppContext {
+  language: string
+  framework: string
+  projects: number
+}
+
+const AppContext = createContext<IAppContext | null>(null)
 
 function App() {
 
@@ -29,33 +40,42 @@ function App() {
 
   // mySecondText = 'Opa'
 
+  // 9 - context
+  const contextValue: IAppContext = {
+    language: 'Javascript',
+    framework: 'Express',
+    projects: 5
+  }
+
   return (
-    <div className="App">
-      <h1>Typescript com React</h1>
-      <h2>Nome: {name}</h2>
-      <p>Idade: {age}</p>
-      {isWorking && <p>Está trabalhando!</p>}
-      <h3>{userGreeting(name)}</h3>
-      <FirstComponent />
-      <SecondComponent name="segundo" />
-      <Destructuring
-        title="Primeiro post"
-        content="Algum conteúdo"
-        comentQty={10}
-        tags={["ts", "js"]}
-        category={Category.TS}
-      />
-      <Destructuring
-        title="Segundo post"
-        content="Algum conteúdo"
-        comentQty={5}
-        tags={["py"]}
-        category={Category.P}
-      />
-      <State />
-      {myText && <p>Tem texto na variável!</p>}
-      {mySecondText && <p>Tem texto na variável!</p>}
-    </div>
+    <AppContext.Provider value={contextValue}>
+      <div className="App">
+        <h1>Typescript com React</h1>
+        <h2>Nome: {name}</h2>
+        <p>Idade: {age}</p>
+        {isWorking && <p>Está trabalhando!</p>}
+        <h3>{userGreeting(name)}</h3>
+        <FirstComponent />
+        <SecondComponent name="segundo" />
+        <Destructuring
+          title="Primeiro post"
+          content="Algum conteúdo"
+          comentQty={10}
+          tags={["ts", "js"]}
+          category={Category.TS}
+        />
+        <Destructuring
+          title="Segundo post"
+          content="Algum conteúdo"
+          comentQty={5}
+          tags={["py"]}
+          category={Category.P}
+        />
+        <State />
+        {myText && <p>Tem texto na variável!</p>}
+        {mySecondText && <p>Tem texto na variável!</p>}
+      </div>
+    </AppContext.Provider>
   );
 }
 
