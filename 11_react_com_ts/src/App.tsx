@@ -8,6 +8,9 @@ import Destructuring, { Category } from "./components/Destructuring"
 // 6 - useState
 import State from "./components/State"
 
+// 8 - types
+type textOrNull = string | null
+
 function App() {
 
   // 1 - variaveis
@@ -20,6 +23,12 @@ function App() {
     return `Olá, ${name}`
   }
 
+  // 8 - type
+  const myText: textOrNull = 'Tem algum texto aqui'
+  let mySecondText: textOrNull = null
+
+  // mySecondText = 'Opa'
+
   return (
     <div className="App">
       <h1>Typescript com React</h1>
@@ -28,15 +37,15 @@ function App() {
       {isWorking && <p>Está trabalhando!</p>}
       <h3>{userGreeting(name)}</h3>
       <FirstComponent />
-      <SecondComponent name="segundo"/>
-      <Destructuring 
+      <SecondComponent name="segundo" />
+      <Destructuring
         title="Primeiro post"
         content="Algum conteúdo"
         comentQty={10}
         tags={["ts", "js"]}
         category={Category.TS}
       />
-      <Destructuring 
+      <Destructuring
         title="Segundo post"
         content="Algum conteúdo"
         comentQty={5}
@@ -44,6 +53,8 @@ function App() {
         category={Category.P}
       />
       <State />
+      {myText && <p>Tem texto na variável!</p>}
+      {mySecondText && <p>Tem texto na variável!</p>}
     </div>
   );
 }
