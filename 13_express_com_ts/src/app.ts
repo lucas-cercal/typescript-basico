@@ -33,7 +33,7 @@ app.get('/api/interfaces', (req: Request, res: Response) => {
   return res.send('Utilizando as interfaces!')
 })
 
-/// 6 - enviando json
+// 6 - enviando json
 app.get('/api/json', (req: Request, res: Response) => {
   return res.json({
     name: 'Shirt',
@@ -41,6 +41,12 @@ app.get('/api/json', (req: Request, res: Response) => {
     color: 'Blue',
     sizes: ['P', 'M', 'G']
   })
+})
+
+// 7 - router parameters
+app.get('/api/product/:id', (req: Request, res: Response) => {
+  console.log(req.params)
+  return res.send('Produto não encontrado')
 })
 
 app.listen(3000, () => {
