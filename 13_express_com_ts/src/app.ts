@@ -6,8 +6,16 @@ import express from 'express'
 
 const app = express()
 
+app.use(express.json())
+
 app.get('/', (req, res) => {
   return res.send('Helo Express!')
+})
+
+// 3 - rota com POST
+app.post('/api/product', (req, res) => {
+  console.log(req.body)
+  return res.send('Produto adicionado!')
 })
 
 app.listen(3000, () => {
